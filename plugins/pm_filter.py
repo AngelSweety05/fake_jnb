@@ -391,7 +391,7 @@ async def next_page(bot, query):
                     for file in files
                 ]
         else:
-            if query.form_user.id in ADMINS:
+            if query.from_user.id in ADMINS:
                 btn = [
                     [
                         InlineKeyboardButton(text=f"{file.file_name}",callback_data=f'files#{file.file_id}',),
@@ -399,7 +399,7 @@ async def next_page(bot, query):
                     ]
                     for file in files
                 ]
-            elif query.form_user.id in MY_USERS:
+            elif query.from_user.id in MY_USERS:
                 btn = [
                     [
                         InlineKeyboardButton(text=f"{file.file_name}",callback_data=f'files#{file.file_id}',),
@@ -711,7 +711,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
                         for file in files
                     ]
             else:
-                if query.form_user.id in ADMINS:
+                if query.from_user.id in ADMINS:
                     btn = [
                         [
                             InlineKeyboardButton(text=f"{file.file_name}",callback_data=f'files#{file.file_id}',),
@@ -719,7 +719,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
                         ]
                         for file in files
                     ]
-                elif query.form_user.id in MY_USERS:
+                elif query.from_user.id in MY_USERS:
                     btn = [
                         [
                             InlineKeyboardButton(text=f"{file.file_name}",callback_data=f'files#{file.file_id}',),
@@ -1024,7 +1024,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
                         for file in files
                     ]
             else:
-                if query.form_user.id in ADMINS:
+                if query.from_user.id in ADMINS:
                     btn = [
                         [
                             InlineKeyboardButton(text=f"{file.file_name}",callback_data=f'files#{file.file_id}',),
@@ -1032,7 +1032,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
                         ]
                         for file in files
                     ]
-                elif query.form_user.id in MY_USERS:
+                elif query.from_user.id in MY_USERS:
                     btn = [
                         [
                             InlineKeyboardButton(text=f"{file.file_name}",callback_data=f'files#{file.file_id}',),
@@ -1309,7 +1309,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
                         for file in files
                     ]
             else:
-                if query.form_user.id in ADMINS:
+                if query.from_user.id in ADMINS:
                     btn = [
                         [
                             InlineKeyboardButton(text=f"{file.file_name}",callback_data=f'files#{file.file_id}',),
@@ -1317,7 +1317,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
                         ]
                         for file in files
                     ]
-                elif query.form_user.id in MY_USERS:
+                elif query.from_user.id in MY_USERS:
                     btn = [
                         [
                             InlineKeyboardButton(text=f"{file.file_name}",callback_data=f'files#{file.file_id}',),
@@ -2645,7 +2645,7 @@ async def auto_filter(client, msg, spoll=False):
                     for file in files
                 ]
         else:
-            if message.form_user.id in ADMINS:
+            if message.from_user.id in ADMINS:
                 btn = [
                     [
                         InlineKeyboardButton(text=f"{file.file_name}",callback_data=f'files#{file.file_id}',),
@@ -2653,7 +2653,7 @@ async def auto_filter(client, msg, spoll=False):
                     ]
                     for file in files
                 ]
-            elif message.form_user.id in MY_USERS:
+            elif message.from_user.id in MY_USERS:
                 btn = [
                     [
                         InlineKeyboardButton(text=f"{file.file_name}",callback_data=f'files#{file.file_id}',),
